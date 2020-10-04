@@ -1,0 +1,23 @@
+{
+  "name": "post-app-mysql",
+  "version": "1.0.0",
+  "description": "Sistema de de postagens, usando as tecnologias Express, Body-parser, Handlebars,  e Sequelize com MySQL.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leandrocastrold/post-app-mysql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leandrocastrold/post-app-mysql/issues"
+  },
+  "homepage": "https://github.com/leandrocastrold/post-app-mysql#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
