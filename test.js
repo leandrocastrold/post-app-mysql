@@ -4,11 +4,22 @@ const sequelize = new Sequelize('postapp', 'root', '12345', {
     dialect: "mysql"
 });
 
+const Posting = sequelize.define('postings', {
+    title: {
+        type: Sequelize.STRING
+    },
+    content: {
+        type: Sequelize.TEXT
+    }
+})
+
+
 sequelize.authenticate()
     .then(() => {
-        console.log("Conectado ao Banco de dados com sucesso!")
+        console.log("Connection successful!")
     })
     .catch((erro) => {
-        console.log("Erro de conexão: " + erro.message);
+        console.log("Connection error: " + erro.message);
     });
    
+//Posting.sync({force: true});
