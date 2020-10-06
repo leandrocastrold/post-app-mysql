@@ -30,7 +30,7 @@ app.post('/add', (req, res) => {
     let formContent = req.body.content;
     res.send('Título: ' + formTitle + ' Conteúdo: ' + formContent);
 })
-
+no
 app.listen(port, (req, res) => {
     console.log(`Server running on port ${port}`);
 })
