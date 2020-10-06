@@ -3,10 +3,15 @@ const app = express();
 const port = 3000;
 
 const handlebars = require('express-handlebars');
+const bodyParser = require('body-parser');
 
 //Template Engine
 app.engine('handlebars', handlebars({defaultLayout: 'main'}))
 app.set('view engine', 'handlebars');
+
+//Body-Parser
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json());
 
 //Database Connection
 const Sequelize = require('sequelize');
@@ -21,7 +26,9 @@ app.get('/post', (req, res) => {
 })
 
 app.post('/add', (req, res) => {
-    res.send('Post published!');
+    let formTitle = req.body.title;
+    let formContent = req.body.content;
+    res.send('Título: ' + formTitle + ' Conteúdo: ' + formContent);
 })
 
 app.listen(port, (req, res) => {
