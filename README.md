@@ -2,5 +2,15 @@
 
 ## Sobre
 
-Sistema de postagens, usando as tecnologias *Express*, *Body-parser*, *Handlebars* e *Sequelize* com MySQL. 
-Nele, é possível criar posts simples e salvá-los de em banco de dados MySQL.
+Sistema de postagens simples, onde é possível criar posts e salvá-los de em banco de dados.  
+
+## Tecnologias utilizadas
+
+O projeto foi desenvolvido utilizando as seguintes tecnologias:
+
+- [*NodeJS*](https://nodejs.org/en/)
+- [*Express*](https://expressjs.com/)
+- [*Body-parser*](https://www.npmjs.com/package/body-parser)
+- [*Handlebars*](https://handlebarsjs.com/) 
+- [*Sequelize ORM*](https://sequelize.org/) 
+- [*MySQL*](https://www.mysql.com/)
