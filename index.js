@@ -4,6 +4,7 @@ const port = 3000;
 
 const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser');
+const Post = require('./models/Post');
 
 //Template Engine
 app.engine('handlebars', handlebars({defaultLayout: 'main'}))
@@ -13,24 +14,32 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 
-//Database Connection
-const Sequelize = require('sequelize');
-const sequelize = new Sequelize('postapp', 'root', '12345', {
-    host: "localhost",
-    dialect: "mysql"
-});
+
 
 //Routes
+
+app.get('/', (req, res) => {
+    Post.findAll().then((posts) => {
+        res.render('home', {posts: posts});    
+    })    
+    
+});
+
 app.get('/post', (req, res) => {
     res.render('form');
 })
 
 app.post('/add', (req, res) => {
-    let formTitle = req.body.title;
-    let formContent = req.body.content;
-    res.send('Título: ' + formTitle + ' Conteúdo: ' + formContent);
+    Post.create({
+        title: req.body.title,
+        content: req.body.content
+    }).then(() => {
+        res.redirect('/');
+    }).catch((erro) => {
+        res.send('Um erro ocorreu: ' + erro.message)
+    });
 })
-no
+
 app.listen(port, (req, res) => {
     console.log(`Server running on port ${port}`);
 })
