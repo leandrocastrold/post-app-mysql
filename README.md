@@ -1,10 +1,10 @@
 # post-app-mysql
 
-## Sobre
+## 📖Sobre
 
-Sistema de postagens simples, onde é possível criar posts e salvá-los de em banco de dados.  
-
-## Tecnologias utilizadas
+Sistema de postagens simples, onde é possível criar posts e salvá-los em banco de dados.  
+___
+## 💻Tecnologias utilizadas
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
@@ -14,3 +14,5 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [*Handlebars*](https://handlebarsjs.com/) 
 - [*Sequelize ORM*](https://sequelize.org/) 
 - [*MySQL*](https://www.mysql.com/)
+___
+

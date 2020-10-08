@@ -6,6 +6,8 @@ const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser');
 const Post = require('./models/Post');
 
+app.use(express.static('/public'))
+
 //Template Engine
 app.engine('handlebars', handlebars({defaultLayout: 'main'}))
 app.set('view engine', 'handlebars');
@@ -38,6 +40,15 @@ app.post('/add', (req, res) => {
     }).catch((erro) => {
         res.send('Um erro ocorreu: ' + erro.message)
     });
+})
+
+app.get('/delete/:id', (req, res) => {
+    Post.destroy({ where: { 'id': req.params.id } })
+        .then(() => {
+            res.send('Post deletado')
+        }).catch((erro) => {
+            res.send("Um erro ocorreu: " + erro.message);
+        })
 })
 
 app.listen(port, (req, res) => {
