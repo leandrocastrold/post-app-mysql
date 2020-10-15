@@ -1,10 +1,14 @@
-<h1>Posts Publicados:</h1>
 
+<div id="main-container">
+<h2>Posts</h2>
 {{#each posts}}
+<div id="container-post" class="page-bg">
 <small>{{dataValues.createdAt}}</small>
-<h2>Título: {{dataValues.title}}</h2>
+<h2>{{dataValues.title}}</h2>
 <P>{{dataValues.content}}</P>
- <a href="/delete/{{dataValues.id}}"><button>Deletar</button></a>
+ <a href="/delete/{{dataValues.id}}"><button>Excluir</button></a>
 <br>
-<hr>
+</div>
 {{/each}}
+
+</div>

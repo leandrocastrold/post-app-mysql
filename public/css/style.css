@@ -1,13 +1,114 @@
-* {
+* { margin: 0;
+    padding: 0;
+    }
+
+:root {
+   --bg-color: rgb(7, 121, 197);
+   --font-color: whitesmoke;
 }
-#form-post {
+
+h2 {
    text-align: center;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+header {
+   height: 50px;
+   color: var(--font-color);
+   background-color: var(--bg-color);
+   box-shadow: rgba(0, 0, 0, 0.479);
+   margin: auto;
+   margin-bottom: 20px;
    text-shadow: 1px 2px 2px black;
-   color: whitesmoke;
+   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.7);
+   text-align: left;
+   vertical-align: middle;
+   line-height: 50px;
+   padding-left: 50px;
+   width: 52% ;
+   
+}
+
+.menu-left {
+   display: inline-flex;
+   float: left; 
+}
+
+.menu-right {
+   display: inline-flex;
+  float: right;
+  padding: 0px 20px 10px 20px;
+}
+
+button {
+   width: 100px;
+   height: 25px;
+   background-color: var(--font-color);
+   border-radius: 5px;
+   font-weight: bold;
+}
+
+
+#container-post {
+ display: block;
+ text-align: left;
+ padding-left: 10px;
+ margin: auto;
+ margin-top: 20px;
+ margin-bottom: 20px;
+ padding-bottom: 5px;
+ width: 90%;
+ 
+}
+
+.page-bg {
+   color: var(--font-color);
+   background-color:var(--bg-color);
+   border-radius: 5px;
+   text-shadow: 1px 2px 2px black;
+   box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#main-container {
+   margin: auto;
+   width: 60%;
+   border-radius: 10px;
+}
+
+#form-post {
+   text-align: left;
    padding-top: 20px;
+   padding-left: 20px ;
+   padding-bottom: 20px;
    margin: auto;
    margin-top: 50px;
-   background-color: rgb(7, 121, 197);
    width: 50%;
-   border-radius: 20px;
 }
+
+#login-form {
+   text-align: center;
+   padding-top: 20px;
+   padding-left: 20px ;
+   padding-bottom: 20px;
+   margin: auto;
+   margin-top: 50px;
+   width: 54%;
+}
+
+form input  {
+   width: 400px;
+   height: 25px;
+   border-radius: 5px;
+}
+
+form textarea {
+   width: 400px;
+   height: 100px;
+   border-radius: 5px;
+}
+
+form button {
+   margin-top: 20px;
+}
+

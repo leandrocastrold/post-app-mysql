@@ -1,12 +1,13 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const path = require('path');
 
 const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser');
 const Post = require('./models/Post');
 
-app.use(express.static('/public'))
+app.use(express.static(__dirname + '/public'))
 
 //Template Engine
 app.engine('handlebars', handlebars({defaultLayout: 'main'}))
@@ -29,6 +30,10 @@ app.get('/', (req, res) => {
 
 app.get('/post', (req, res) => {
     res.render('form');
+})
+
+app.get('/login', (req, res) => {
+    res.render('registerForm');
 })
 
 app.post('/add', (req, res) => {
